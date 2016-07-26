@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BlueVC.swift
 //  ContainerViewTest
 //
 //  Created by Sharon's Mac on 7/20/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BlueVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

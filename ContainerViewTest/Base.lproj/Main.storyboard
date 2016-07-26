@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j7u-9N-Y2x">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--BlueVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BlueVC" customModule="ContainerViewTest" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,134 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oi7-SB-ptu">
+                                <rect key="frame" x="70" y="114" width="460" height="436"/>
+                                <connections>
+                                    <segue destination="118-JA-VZy" kind="embed" id="Zxk-sl-dOK"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-JE-ZaD">
+                                <rect key="frame" x="0.0" y="78" width="600" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ju0-lH-qx1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098040700000002" green="0.71372550729999995" blue="0.8156862855" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oi7-SB-ptu" secondAttribute="bottom" constant="50" id="1z6-xL-Erg"/>
+                            <constraint firstItem="oi7-SB-ptu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="5BO-Ec-PTP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oi7-SB-ptu" secondAttribute="trailing" constant="50" id="Bfd-Ld-n6q"/>
+                            <constraint firstItem="oi7-SB-ptu" firstAttribute="top" secondItem="nOd-JE-ZaD" secondAttribute="bottom" constant="15" id="WyH-GD-ktJ"/>
+                            <constraint firstAttribute="trailing" secondItem="nOd-JE-ZaD" secondAttribute="trailing" id="hpX-1S-SQF"/>
+                            <constraint firstItem="oi7-SB-ptu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="iaf-rW-dje"/>
+                            <constraint firstItem="nOd-JE-ZaD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uyt-bQ-o7U"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KT8-8J-Tjv"/>
+                    <connections>
+                        <segue destination="dTw-5Q-O3y" kind="presentation" identifier="goToPurple" modalTransitionStyle="crossDissolve" id="TPr-WD-CHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1013" y="303"/>
+        </scene>
+        <!--GreenVC-->
+        <scene sceneID="HWO-sz-I9q">
+            <objects>
+                <viewController storyboardIdentifier="GreenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="118-JA-VZy" customClass="GreenVC" customModule="ContainerViewTest" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xsp-61-J24"/>
+                        <viewControllerLayoutGuide type="bottom" id="N5u-5H-YPs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lnv-Zb-udW">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Buttercups" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-j9-q13">
+                                <rect key="frame" x="190" y="156" width="80" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="atK-s8-ry6"/>
+                                    <constraint firstAttribute="height" constant="125" id="wl5-Hb-qO7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61176472900000001" green="0.77647066119999997" blue="0.32549020649999999" alpha="1" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="0dG-j9-q13" firstAttribute="centerY" secondItem="lnv-Zb-udW" secondAttribute="centerY" id="5pD-Es-hc6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0dG-j9-q13" secondAttribute="trailing" constant="170" id="8f5-ej-ymQ"/>
+                            <constraint firstItem="0dG-j9-q13" firstAttribute="centerX" secondItem="lnv-Zb-udW" secondAttribute="centerX" id="8zs-FA-Dk4"/>
+                            <constraint firstItem="0dG-j9-q13" firstAttribute="leading" secondItem="lnv-Zb-udW" secondAttribute="leadingMargin" constant="170" id="KjC-dA-K1O"/>
+                            <constraint firstItem="N5u-5H-YPs" firstAttribute="top" secondItem="0dG-j9-q13" secondAttribute="bottom" constant="156" id="OOz-Uw-Ps2"/>
+                            <constraint firstItem="0dG-j9-q13" firstAttribute="top" secondItem="Xsp-61-J24" secondAttribute="bottom" constant="155" id="QVC-BW-Lcc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8f5-ej-ymQ"/>
+                                <exclude reference="KjC-dA-K1O"/>
+                                <exclude reference="QVC-BW-Lcc"/>
+                                <exclude reference="OOz-Uw-Ps2"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1iF-wU-FaV" appends="YES" id="fYC-ph-VkD"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="buttercupsImage" destination="0dG-j9-q13" id="BNB-ZL-YDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qA6-mg-i25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1iF-wU-FaV">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="118-JA-VZy" id="8q3-gK-Gjh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1675" y="303"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YId-9c-Hhl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j7u-9N-Y2x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t47-Vj-L1w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Mi-37-ZKV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acM-OZ-asq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="303"/>
+        </scene>
+        <!--UIViewController-tZz-o2-7BS-->
+        <scene sceneID="SWq-26-q6d">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PurpleAndYellow" referencedIdentifier="UIViewController-tZz-o2-7BS" id="dTw-5Q-O3y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WF7-J6-jc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="1124"/>
+        </scene>
+        <!--YellowVC-->
+        <scene sceneID="nQD-XX-Dkf">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="YellowVC" storyboardName="PurpleAndYellow" referencedIdentifier="YellowVC" id="4y8-4e-zQb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ac2-Uv-yno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="1124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Buttercups" width="326" height="518"/>
+    </resources>
 </document>

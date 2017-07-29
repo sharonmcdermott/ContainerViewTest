@@ -16,18 +16,18 @@ class GreenVC: UIViewController {
         super.viewDidLoad()
         
         
-        buttercupsImage.hidden = false
+        buttercupsImage.isHidden = false
         
 
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func tapGestureRecognized(sender: UITapGestureRecognizer) {
+    @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
 
 //        1.shadowOpacity = 1.shadowOpacity == 0.7 ? 0.0 : 0.7
 //    }
 
-        buttercupsImage.hidden = !buttercupsImage.hidden //the ! make it the opposite (not hidden)
+        buttercupsImage.isHidden = !buttercupsImage.isHidden //the ! make it the opposite (not hidden)
 
         }
 }

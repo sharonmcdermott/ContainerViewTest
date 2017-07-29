@@ -277,6 +277,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = E24NELMJLG;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharonmcdermott.ContainerViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +293,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = E24NELMJLG;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharonmcdermott.ContainerViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
